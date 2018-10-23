@@ -17,6 +17,7 @@ public:
 			this->operator[](i)= a[i];
 	}
 	my_vector(const my_vector &a) : dyn_array(a) {};
+	
 	double norma()const 
 	{
 		int sum=0;
@@ -74,7 +75,7 @@ public:
 
 	bool operator ==(const my_vector& d) const
 	{
-		bool a = dyn_array(d)  == dyn_array (*this); ;
+		bool a = dyn_array:: operator==(d); 
 		return a;
 	}
 
